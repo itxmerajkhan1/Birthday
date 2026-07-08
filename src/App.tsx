@@ -12,6 +12,7 @@ import WhyAmazing from "./components/WhyAmazing";
 import SurpriseModal from "./components/SurpriseModal";
 import PhotoGallery from "./components/PhotoGallery";
 import FireworksCelebration from "./components/FireworksCelebration";
+import GrandFinale from "./components/GrandFinale";
 
 import { synth } from "./components/AudioSynthesizer";
 
@@ -164,6 +165,9 @@ export default function App() {
                   </div>
                 </div>
               </section>
+
+              {/* Section 10: Grand Finale */}
+              <GrandFinale />
 
             </main>
 
