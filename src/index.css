@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --color-gold-50: #fcf9ee;
+  --color-gold-100: #f6ecce;
+  --color-gold-200: #ebd89f;
+  --color-gold-300: #dbbd6a;
+  --color-gold-400: #cca03f;
+  --color-gold-500: #b58024;
+  --color-gold-600: #935f1a;
+  --color-gold-700: #714216;
+  --color-gold-800: #542f14;
+  --color-gold-900: #3f2212;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  /* Selection Colors */
+  ::selection {
+    background-color: rgba(219, 189, 106, 0.25);
+    color: #ebd89f;
+  }
+
+  /* Custom Premium Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #000000;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1e1e1e;
+    border-radius: 9999px;
+    border: 2px solid #000000;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #dbbd6a;
+  }
+}
+
+/* Glassmorphism utility classes */
+.glass-panel {
+  background: rgba(15, 15, 20, 0.4);
+  backdrop-filter: blur(16px) saturate(130%);
+  -webkit-backdrop-filter: blur(16px) saturate(130%);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.glass-panel-light {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+/* Paper Journal Page Transition Classes */
+.notebook-page {
+  box-shadow: 
+    0 15px 35px rgba(0,0,0,0.4), 
+    0 5px 15px rgba(0,0,0,0.2),
+    inset 0 0 40px rgba(0,0,0,0.04);
+  background-image: linear-gradient(rgba(227, 222, 205, 0.2) 1px, transparent 1px);
+  background-size: 100% 2rem;
+}
+
+/* Custom animation classes */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.25;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.45;
+    transform: scale(1.12);
+  }
+}
+
+.pulse-glow-gold {
+  animation: pulseGlow 8s ease-in-out infinite;
+}
+
+/* Grain texture overlay */
+.noise-overlay {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.02'/%3E%3C/svg%3E");
+}

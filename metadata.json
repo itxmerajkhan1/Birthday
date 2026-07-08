@@ -1,0 +1,6 @@
+{
+  "name": "Happy Birthday Muneeza",
+  "description": "An ultra-premium, cinematic, Apple-quality Birthday Surprise Website for Muneeza with live countdown, interactive gift box, special friendship notes, memory wall, and fireworks celebration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
